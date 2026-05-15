@@ -342,5 +342,98 @@
             });
         }
     </script>
+<!-- MANDATORY GOOGLE ADSENSE LEGAL COMPLIANCE FOOTER -->
+<style>
+    .legal-footer {
+        max-width: 1000px;
+        margin: 60px auto 20px auto;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-gray);
+        text-align: center;
+        font-size: 12px;
+        color: var(--text-gray);
+    }
+    .legal-toggle {
+        background: none;
+        border: none;
+        color: var(--accent-blue);
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0 10px;
+        text-decoration: underline;
+        width: auto;
+        display: inline-block;
+        padding: 5px;
+    }
+    .legal-toggle:hover {
+        color: var(--text-light);
+    }
+    .legal-content-panel {
+        display: none;
+        text-align: left;
+        background-color: var(--panel-dark);
+        border: 1px solid var(--border-gray);
+        border-radius: 6px;
+        padding: 20px;
+        margin-top: 15px;
+        line-height: 1.6;
+        color: var(--text-gray);
+    }
+    .legal-content-panel h3 {
+        color: #fff;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+</style>
+
+<div class="legal-footer">
+    <p>© 2026 Webhook JSON Tool. All Rights Reserved.</p>
+    <button class="legal-toggle" onclick="toggleLegal('privacy-panel')">Privacy Policy</button> | 
+    <button class="legal-toggle" onclick="toggleLegal('disclaimer-panel')">Financial Disclaimer</button>
+
+    <!-- Privacy Policy Content Panel -->
+    <div id="privacy-panel" class="legal-content-panel">
+        <h3>Privacy Policy</h3>
+        <p><strong>Effective Date: May 15, 2026</strong></p>
+        <p>This Privacy Policy outlines how our web-based utility app handles user interaction data. We value structural privacy rules, especially regarding programmatic web tracking frameworks.</p>
+        <h3>Data Collection and Memory Logs</h3>
+        <p>This application operates entirely as a client-side utility tool using local browser memory strings. We do not maintain external database infrastructure nodes. Any data string parameters, asset watchlists, or security passphrases you paste into the application workspace are handled strictly locally within your individual web browser cache. No raw payload configurations are ever transmitted, uploaded, or stored across remote host servers.</p>
+        <h3>Cookies and Third-Party Advertising Frameworks</h3>
+        <p>We leverage third-party advertising vendors, including Google AdSense, to display banner advertisements when you visit our utility site. Google uses specialized DART cookies to serve automated, contextual ads to users based on their historical browsing metrics across the wider internet ecosystem. You can manage or disable cookie tracking protocols directly via your personal browser privacy settings at any time.</p>
+    </div>
+
+    <!-- Financial Disclaimer Content Panel -->
+    <div id="disclaimer-panel" class="legal-content-panel">
+        <h3>Financial & Technical Risk Disclaimer</h3>
+        <p><strong>Trading Risk Acknowledgment:</strong> Financial market operations, including forex execution, algorithmic cryptocurrency trading, and stock day trading arrays, carry extreme levels of financial risk. Past execution metrics do not guarantee future profitable vectors. You should never trade using capital parameters you cannot afford to completely lose.</p>
+        <h3>No Financial or Coding Advice Provided</h3>
+        <p>The code structures, JSON payload generation schemas, and formatting variables rendered by this free client-side utility are intended strictly for educational and automation structural visualization purposes. This tool does not function as an investment management terminal or certified financial guidance loop. The software logic is provided on an "as-is" configuration baseline without active structural warranties.</p>
+        <h3>Limitation of Operational Liability</h3>
+        <p>By executing and copying code parameters from this platform, you assume absolute technical responsibility for your automated execution pipeline. We accept zero liability for skipped fills, missing commas, parsed string script runtime errors, API validation flags, execution bridge disconnections, or financial trading losses resulting from the use of these generated syntax arrays.</p>
+    </div>
+</div>
+
+<script>
+    function toggleLegal(panelId) {
+        const panel = document.getElementById(panelId);
+        const allPanels = document.querySelectorAll('.legal-content-panel');
+        
+        // Close the other panel if open
+        allPanels.forEach(p => {
+            if (p.id !== panelId) p.style.display = 'none';
+        });
+
+        // Toggle the current panel state
+        if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+        } else {
+            panel.style.display = 'block';
+            // Smoothly scroll down to show the compliance text
+            panel.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
 </body>
 </html>
